@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function check(){
+      // let regex=/^[a-z]{3}\d{2}$/  //global search //curly braces for multiple numbers
+     // let regex=/^[9][8][7]\d{7}$/ //or let regex=/^(987)\d{7}$/g or let regex=/^(987|789)\d{7}$/g
+     //let regex=/\d+/
+     //let regex=/\d*/
+     let regex=/^\+91\s(987|789)\d{7}$/g
+
+      let data=document.getElementById('data').value
+       alert(data.match(regex))
+       if(regex.test(data)){
+           alert("valid number")
+       }else{
+           alert("invalid mobile number")
+       }
+
+
+    }
+        
+
+
+    </script>
+    <input type="text" id=data>
+    <button onclick="check()">click</button>
+   
+</body>
+</html>

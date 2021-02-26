@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="content" cols="30" rows="10">
+        
+    </textarea>
+    <input type="text" id="word">
+    <button onclick="highlight()">Search</button>
+    <p id=newcontent></p>
+    <script>
+        function highlight(){
+          let word=document.getElementById("word").Value;
+          let content=document.getElementById("content").Value;
+          let regex=new RegExp(word,"g")
+         let s=content.replace(regex,"<span style='background-color:yellow'>"+word+"</span>")
+         document.getElementById("newcontent").innerHTML=s
+            
+        }
+
+
+    </script>
+
+</body>
+</html>

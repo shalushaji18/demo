@@ -1,0 +1,21 @@
+.tb1{
+    border-collapse: collapse;
+}
+.th{
+    background-color:gray;
+}
+.th:hover{
+    background-color:blue;
+}
+.rowcls:nth-child(even){
+    background-color:hotpink;
+}
+.rowcls:hover:nth-child(even){
+    background-color:indigo ;
+}
+.rowcls:nth-child(odd){
+    background-color:green;
+}
+.rowcls:hover:nth-child(odd){
+    background-color:yellow;
+}
