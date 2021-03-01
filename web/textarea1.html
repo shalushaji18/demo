@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="content" cols="30" rows="10">
+
+    </textarea>
+    <input type="text" id="word">
+    <button onclick="getcont()">Search</button>
+    <p id="newcontent"></p>
+    <script>
+        function getcont() {
+            let word=document.getElementById("word").value;
+
+            let content=document.getElementById("content").value;
+           
+            let regex=new RegExp(word,"g")
+
+            let retxt=content.replace(regex,"<span style='background-color:yellow'>"+word+"</span>")
+            document.getElementById("newcontent").innerHTML=retxt
+            
+
+    // console.log(regex); 
+
+
+}
+    </script>
+</body>
+</html>

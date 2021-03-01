@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Employee(eid,name,salary){
+     this.Eid=eid
+     this.name=name
+     this.salary=salary
+
+     this.show=function(){
+         console.log(`Employee id=${this.Eid}`)
+         console.log(`Employee name=${this.name}`)
+         console.log(`Employee salary=${this.salary}`)
+     }
+     this.incSalary=function(amount){
+        console.log("current salary",this.salary) 
+        this.salary+=amount
+        console.log("After Updation",this.salary)
+     }
+     
+ }
+ let employee1=new Employee("E101","Raj",10000)
+ let employee2=new Employee("E102","Renu",15000)
+ let employee3=new Employee("E103","Ron",10400)
+ console.log(employee1)
+ employee1.incSalary(4000)
+employee1.show()
+employee2.show()
+
+
+
+
+
+
+    </script>
+</body>
+</html>
